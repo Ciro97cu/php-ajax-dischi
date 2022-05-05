@@ -41,9 +41,9 @@
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <p class="d-inline-block pe-2 text-white">Selezione per Genere</p>
-                    <select name="genre" id="genre" @change="displayGenre($event)">
-                        <option v-for="(item, index) in arrayGenre" :key="index" :value="item">
-                            {{ item }}
+                    <select name="genre" id="genre" v-model="genre">
+                        <option v-for="(genre, index) in arrayGenre" :key="index">
+                            {{ genre }}
                         </option>
                     </select>
                 </div>

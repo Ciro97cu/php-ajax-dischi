@@ -3,12 +3,7 @@ const app = new Vue({
     data: {
         arrayDisc: [],
         arrayGenre: [],
-        valueGenre: "All",
-    },
-    methods: {
-        displayGenre: function (e) {
-            this.valueGenre = e.target.value;
-        }
+        genre: "All",
     },
     mounted() {
         axios.get("http://localhost/php-ajax-dischi/Milestone%202/php/data.php").then(response => {
@@ -24,10 +19,10 @@ const app = new Vue({
     },
     computed: {
         displaybyfilters: function () {
-            if (this.valueGenre === "All") {
+            if (this.genre === "All") {
                 return this.arrayDisc
             }
-            return this.arrayDisc.filter((item) => item.genre === this.valueGenre);
+            return this.arrayDisc.filter((item) => item.genre === this.genre);
         },
     },
 })
