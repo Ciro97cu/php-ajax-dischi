@@ -1,3 +1,7 @@
+<?php
+include "php/data.php";
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -8,12 +12,9 @@
     <!--***** link montserrat *****-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--***** bootstrap css only *****-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--***** link my css file *****-->
     <link rel="stylesheet" href="css/main.css">
     <!--***** link favicon *****-->
@@ -34,12 +35,14 @@
     <main>
         <div class="container-sm">
             <div class="row gy-4 justify-content-around pt-5">
-                <div class="text-white song_card text-center p-3">
-                    <img src="" alt="" class="w-100" />
-                    <h4 class="my-4">titolo</h4>
-                    <p>autore</p>
-                    <p>anno</p>
-                </div>
+                <?php foreach ($arrayDisc as $disc) { ?>
+                    <div class="text-white song_card text-center p-3">
+                        <img src="<?= $disc['poster'] ?>" alt="<?= $disc['author'] ?>" class="w-100" />
+                        <h4><?= $disc["title"] ?></h4>
+                        <p><?= $disc["author"] ?></p>
+                        <p><?= $disc["year"] ?></p>
+                    </div>
+                <?php } ?>
             </div>
 
             <!-- <div v-else class="row justify-content-center">
