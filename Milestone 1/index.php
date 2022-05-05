@@ -44,10 +44,6 @@ include "php/data.php";
                     </div>
                 <?php } ?>
             </div>
-
-            <!-- <div v-else class="row justify-content-center">
-                <div class="spinner-border text-light" role="status"></div>
-            </div> -->
         </div>
     </main>
     <!--***** link script *****-->
