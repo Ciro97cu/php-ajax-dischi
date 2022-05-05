@@ -19,8 +19,6 @@ include "php/data.php";
     <link rel="stylesheet" href="css/main.css">
     <!--***** link favicon *****-->
     <link rel="shortcut icon" href="img/spotify-svg.svg" type="image/x-icon">
-    <!--***** link vue js *****-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>PHP AJAX DISCHI</title>
 </head>
 
