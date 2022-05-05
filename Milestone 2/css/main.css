@@ -31,23 +31,32 @@ header .wrapper_logo img {
 main .container-sm {
   margin-top: 50px;
 }
+main select {
+  background-color: #2e3a46;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
 main .song_card {
   width: 18%;
-}
-
-.song_card {
   background-color: #2e3a46;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
 }
-.song_card h4 {
+main .song_card h4 {
   text-transform: uppercase;
   font-weight: 700;
 }
-.song_card p {
+main .song_card p {
   color: #767b73;
+}
+main .spinner-border {
+  width: 100px;
+  height: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -72,10 +81,6 @@ main .song_card {
   p {
     font-size: 8px;
   }
-}
-.spinner-border {
-  width: 100px;
-  height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
