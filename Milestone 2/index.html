@@ -40,7 +40,7 @@
 
             <div v-if="arrayDisc.length > 0" class="row gy-4 justify-content-around pt-5">
 
-                <div v-for="disc in arrayDisc" class="text-white song_card text-center p-3">
+                <div v-for="(disc, i) in arrayDisc" :key="i" class="text-white song_card text-center p-3">
                     <img :src="disc.poster" :alt="disc.author" class="w-100" />
                     <h4>{{disc.title}}</h4>
                     <p>{{disc.author}}</p>
